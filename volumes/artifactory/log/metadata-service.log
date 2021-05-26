@@ -1,0 +1,84 @@
+2021-05-10T16:23:44.158Z [jfmd ] [INFO ] [f30c521d72f4a30 ] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 5 seconds with 2m0s timeout [init]
+2021-05-10T16:23:49.167Z [jfmd ] [INFO ] [f30c521d72f4a30 ] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 10 seconds with 2m0s timeout [init]
+2021-05-10T16:23:54.169Z [jfmd ] [INFO ] [f30c521d72f4a30 ] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 15 seconds with 2m0s timeout [init]
+2021-05-10T16:24:09.771Z [jfmd ] [INFO ] [f30c521d72f4a30 ] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 25 seconds with 2m0s timeout [init]
+2021-05-10T16:30:00.696Z [jfmd ] [PANIC] [f30c521d72f4a30 ] [keys.go:22                    ] [main                ] - Failed resolving master key: failed resolving 'shared.security.masterKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/master.key
+goroutine 1 [running]:
+runtime/debug.Stack(0x15f71df, 0x4, 0xc0007ba201)
+	/src/runtime/debug/stack.go:24 +0x9f
+jfrog.com/jfrog-go-commons/v7/pkg/log.(*standardLogger).Panicfc(0xc0006f7560, 0x18a8b00, 0xc0006af170, 0xc0006280a0, 0x96, 0x0, 0x0, 0x1)
+	goroot/pkg/mod/jfrog.com/jfrog-go-commons/v7@v7.18.0/pkg/log/standard_logger.go:57 +0x93
+jfrog.com/metadata/v7/services/common.MustResolveSecurityKeys(0x18a8b00, 0xc0006af170, 0x18b1b60, 0xc0006a8870, 0x18b4a40, 0xc0006f7560)
+	jfrog.com/metadata/v7@v7.18.2/services/common/keys.go:22 +0x1c2
+main.main()
+	jfrog.com/metadata/v7@v7.18.2/metadata.go:30 +0x3cd
+ [init]
+2021-05-10T16:30:00.721Z [jfmd ] [INFO ] [f30c521d72f4a30 ] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 380 seconds with 2m0s timeout [init]
+2021-05-24T19:00:21.723Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 5 seconds with 2m0s timeout [init]
+2021-05-24T19:00:26.725Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 10 seconds with 2m0s timeout [init]
+2021-05-24T19:00:31.727Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 15 seconds with 2m0s timeout [init]
+2021-05-24T19:00:36.728Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 20 seconds with 2m0s timeout [init]
+2021-05-24T19:00:41.729Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 25 seconds with 2m0s timeout [init]
+2021-05-24T19:00:46.731Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 30 seconds with 2m0s timeout [init]
+2021-05-24T19:00:51.732Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 35 seconds with 2m0s timeout [init]
+2021-05-24T19:00:56.733Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 40 seconds with 2m0s timeout [init]
+2021-05-24T19:01:01.735Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 45 seconds with 2m0s timeout [init]
+2021-05-24T19:01:06.736Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 50 seconds with 2m0s timeout [init]
+2021-05-24T19:01:11.739Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 55 seconds with 2m0s timeout [init]
+2021-05-24T19:01:16.740Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 60 seconds with 2m0s timeout [init]
+2021-05-24T19:01:21.741Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 65 seconds with 2m0s timeout [init]
+2021-05-24T19:01:26.743Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 70 seconds with 2m0s timeout [init]
+2021-05-24T19:01:31.744Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 75 seconds with 2m0s timeout [init]
+2021-05-24T19:01:36.746Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 80 seconds with 2m0s timeout [init]
+2021-05-24T19:01:41.747Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 85 seconds with 2m0s timeout [init]
+2021-05-24T19:01:46.749Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 90 seconds with 2m0s timeout [init]
+2021-05-24T19:01:51.750Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 95 seconds with 2m0s timeout [init]
+2021-05-24T19:01:56.752Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 100 seconds with 2m0s timeout [init]
+2021-05-24T19:02:01.754Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 105 seconds with 2m0s timeout [init]
+2021-05-24T19:02:06.755Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 110 seconds with 2m0s timeout [init]
+2021-05-24T19:02:11.757Z [jfmd ] [INFO ] [5cdb07c67258eca3] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 115 seconds with 2m0s timeout [init]
+2021-05-24T19:02:16.722Z [jfmd ] [PANIC] [5cdb07c67258eca3] [keys.go:22                    ] [main                ] - Failed resolving master key: failed resolving 'shared.security.masterKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/master.key
+goroutine 1 [running]:
+runtime/debug.Stack(0x15f71df, 0x4, 0xc0002d2c01)
+	/src/runtime/debug/stack.go:24 +0x9f
+jfrog.com/jfrog-go-commons/v7/pkg/log.(*standardLogger).Panicfc(0xc0000121e0, 0x18a8b00, 0xc0004e3650, 0xc0002f01e0, 0x96, 0x0, 0x0, 0x1)
+	goroot/pkg/mod/jfrog.com/jfrog-go-commons/v7@v7.18.0/pkg/log/standard_logger.go:57 +0x93
+jfrog.com/metadata/v7/services/common.MustResolveSecurityKeys(0x18a8b00, 0xc0004e3650, 0x18b1b60, 0xc0004fa6e0, 0x18b4a40, 0xc0000121e0)
+	jfrog.com/metadata/v7@v7.18.2/services/common/keys.go:22 +0x1c2
+main.main()
+	jfrog.com/metadata/v7@v7.18.2/metadata.go:30 +0x3cd
+ [init]
+2021-05-26T18:37:53.636Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 5 seconds with 2m0s timeout [init]
+2021-05-26T18:37:58.649Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 10 seconds with 2m0s timeout [init]
+2021-05-26T18:38:03.661Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 15 seconds with 2m0s timeout [init]
+2021-05-26T18:38:08.678Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 20 seconds with 2m0s timeout [init]
+2021-05-26T18:38:13.685Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 25 seconds with 2m0s timeout [init]
+2021-05-26T18:38:18.692Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 30 seconds with 2m0s timeout [init]
+2021-05-26T18:38:23.703Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 35 seconds with 2m0s timeout [init]
+2021-05-26T18:38:28.704Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 40 seconds with 2m0s timeout [init]
+2021-05-26T18:38:33.705Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 45 seconds with 2m0s timeout [init]
+2021-05-26T18:38:38.707Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 50 seconds with 2m0s timeout [init]
+2021-05-26T18:38:43.708Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 55 seconds with 2m0s timeout [init]
+2021-05-26T18:38:48.709Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 60 seconds with 2m0s timeout [init]
+2021-05-26T18:38:53.710Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 65 seconds with 2m0s timeout [init]
+2021-05-26T18:38:58.712Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 70 seconds with 2m0s timeout [init]
+2021-05-26T18:39:03.713Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 75 seconds with 2m0s timeout [init]
+2021-05-26T18:39:08.714Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 80 seconds with 2m0s timeout [init]
+2021-05-26T18:39:13.715Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 85 seconds with 2m0s timeout [init]
+2021-05-26T18:39:18.717Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 90 seconds with 2m0s timeout [init]
+2021-05-26T18:39:23.718Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 95 seconds with 2m0s timeout [init]
+2021-05-26T18:39:28.719Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 100 seconds with 2m0s timeout [init]
+2021-05-26T18:39:33.720Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 105 seconds with 2m0s timeout [init]
+2021-05-26T18:39:38.721Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 110 seconds with 2m0s timeout [init]
+2021-05-26T18:39:43.723Z [jfmd ] [INFO ] [425a7aa605b4a919] [security_keys.go:149          ] [main                ] - Master key is missing. Pending for 115 seconds with 2m0s timeout [init]
+2021-05-26T18:39:48.625Z [jfmd ] [PANIC] [425a7aa605b4a919] [keys.go:22                    ] [main                ] - Failed resolving master key: failed resolving 'shared.security.masterKey' key; file does not exist: /opt/jfrog/artifactory/var/etc/security/master.key
+goroutine 1 [running]:
+runtime/debug.Stack(0x15f71df, 0x4, 0xc00072e001)
+	/src/runtime/debug/stack.go:24 +0x9f
+jfrog.com/jfrog-go-commons/v7/pkg/log.(*standardLogger).Panicfc(0xc000014000, 0x18a8b00, 0xc0004e16e0, 0xc0002661e0, 0x96, 0x0, 0x0, 0x1)
+	goroot/pkg/mod/jfrog.com/jfrog-go-commons/v7@v7.18.0/pkg/log/standard_logger.go:57 +0x93
+jfrog.com/metadata/v7/services/common.MustResolveSecurityKeys(0x18a8b00, 0xc0004e16e0, 0x18b1b60, 0xc0004f66e0, 0x18b4a40, 0xc000014000)
+	jfrog.com/metadata/v7@v7.18.2/services/common/keys.go:22 +0x1c2
+main.main()
+	jfrog.com/metadata/v7@v7.18.2/metadata.go:30 +0x3cd
+ [init]

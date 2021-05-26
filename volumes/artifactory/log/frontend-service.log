@@ -1,0 +1,13 @@
+2021-05-26T18:40:59.274Z [jffe ] [[34M[INFO ][39M] [                ] [                              ] [main                ] - frontend (jffe) service initialization started. Version: 1.18.6 Revision: 10000006 PID: 3311 Home: /opt/jfrog/artifactory
+2021-05-26T18:40:59.282Z [jffe ] [[31M[1M[ERROR][22M[39M] [                ] [                              ] [main                ] - Error: write EPIPE
+    at afterWriteDispatched (internal/stream_base_commons.js:78:25)
+    at writeGeneric (internal/stream_base_commons.js:73:3)
+    at Socket._writeGeneric (net.js:714:5)
+    at Socket._write (net.js:726:8)
+    at doWrite (_stream_writable.js:415:12)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at Socket.Writable.write (_stream_writable.js:299:11)
+    at Console.log (/opt/jfrog/artifactory/app/frontend/bin/server/dist/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/opt/jfrog/artifactory/app/frontend/bin/server/dist/node_modules/winston-transport/index.js:82:19)
+    at doWrite (/opt/jfrog/artifactory/app/frontend/bin/server/dist/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+2021-05-26T18:40:59.286Z [jffe ] [[34M[INFO ][39M] [                ] [                              ] [main                ] - exit detected

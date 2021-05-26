@@ -1,0 +1,120 @@
+2021-05-10T16:23:52.499Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.a.c.h.HaNodeProperties:65   ] [ocalhost-startStop-1] - Artifactory is running in non-clustered mode.
+2021-05-10T16:23:52.580Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [tifactoryHomeConfigListener:85] [ocalhost-startStop-1] - Resolved Home: '/opt/jfrog/artifactory
+2021-05-10T16:23:53.857Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:147       ] [Thread-9            ] - Starting watch of folder configurations
+2021-05-10T16:23:54.054Z [jfrt ] [WARN ] [75efa3dbe192ac2f] [c.z.h.u.DriverDataSource:70   ] [ocalhost-startStop-1] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2021-05-10T16:23:56.888Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [.BasicConfigurationManager:186] [ocalhost-startStop-1] - Artifactory (jfrt) service initialization started. Version: 7.18.6 Revision: 71806900 PID: 3278 Home: /opt/jfrog/artifactory
+2021-05-10T16:24:03.223Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-10T16:24:08.447Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-10T16:24:14.119Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 6 seconds with 60 seconds timeout
+2021-05-10T16:24:20.318Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 6 seconds with 60 seconds timeout
+2021-05-10T16:24:26.708Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 6 seconds with 60 seconds timeout
+2021-05-10T16:24:32.763Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 6 seconds with 60 seconds timeout
+2021-05-10T16:24:38.991Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-10T16:24:43.952Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-10T16:24:50.271Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 6 seconds with 60 seconds timeout
+2021-05-10T16:24:55.340Z [jfrt ] [INFO ] [75efa3dbe192ac2f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-10T16:30:00.241Z [jfrt ] [ERROR] [75efa3dbe192ac2f] [tifactoryHomeConfigListener:55] [ocalhost-startStop-1] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: Failed resolving master key; Missing master key
+	at org.jfrog.security.common.KeyUtils.keyResolutionFailure(KeyUtils.java:152)
+	at org.jfrog.security.common.KeyUtils.waitForKey(KeyUtils.java:81)
+	at org.artifactory.storage.db.init.MasterKeyBootstrapUtil.getMasterKey(MasterKeyBootstrapUtil.java:188)
+	at org.artifactory.storage.db.init.MasterKeyBootstrapUtil.handleMasterKey(MasterKeyBootstrapUtil.java:64)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:142)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:126)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4705)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5171)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:743)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:606)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1766)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-05-10T16:30:00.426Z [jfrt ] [ERROR] [75efa3dbe192ac2f] [actoryContextConfigListener:92] [ocalhost-startStop-1] - Failed initializing Artifactory context: Artifactory home not initialized.
+2021-05-10T16:30:09.192Z [jfrt ] [WARN ] [                ] [c.z.h.p.HikariPool:787        ] [iCP Main housekeeper] - HikariCP Main - Thread starvation or clock leap detected (housekeeper delta=1m11s594ms858µs629ns).
+2021-05-24T19:00:23.691Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.a.c.h.HaNodeProperties:65   ] [ocalhost-startStop-1] - Artifactory is running in non-clustered mode.
+2021-05-24T19:00:23.748Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [tifactoryHomeConfigListener:85] [ocalhost-startStop-1] - Resolved Home: '/opt/jfrog/artifactory
+2021-05-24T19:00:26.825Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:147       ] [Thread-6            ] - Starting watch of folder configurations
+2021-05-24T19:00:27.934Z [jfrt ] [WARN ] [acaaf9a053efdb0f] [c.z.h.u.DriverDataSource:70   ] [ocalhost-startStop-1] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2021-05-24T19:00:30.546Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [.BasicConfigurationManager:186] [ocalhost-startStop-1] - Artifactory (jfrt) service initialization started. Version: 7.18.6 Revision: 71806900 PID: 3242 Home: /opt/jfrog/artifactory
+2021-05-24T19:00:35.564Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:00:40.566Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:00:45.568Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:00:50.570Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:00:55.572Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:01:00.574Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:01:05.576Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:01:10.578Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:01:15.580Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:01:20.582Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:01:25.585Z [jfrt ] [INFO ] [acaaf9a053efdb0f] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-24T19:01:30.609Z [jfrt ] [ERROR] [acaaf9a053efdb0f] [tifactoryHomeConfigListener:55] [ocalhost-startStop-1] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: Failed resolving master key; Missing master key
+	at org.jfrog.security.common.KeyUtils.keyResolutionFailure(KeyUtils.java:152)
+	at org.jfrog.security.common.KeyUtils.waitForKey(KeyUtils.java:81)
+	at org.artifactory.storage.db.init.MasterKeyBootstrapUtil.getMasterKey(MasterKeyBootstrapUtil.java:188)
+	at org.artifactory.storage.db.init.MasterKeyBootstrapUtil.handleMasterKey(MasterKeyBootstrapUtil.java:64)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:142)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:126)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4705)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5171)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:743)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:606)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1766)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-05-24T19:01:30.614Z [jfrt ] [ERROR] [acaaf9a053efdb0f] [actoryContextConfigListener:92] [ocalhost-startStop-1] - Failed initializing Artifactory context: Artifactory home not initialized.
+2021-05-26T18:38:02.420Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.a.c.h.HaNodeProperties:65   ] [ocalhost-startStop-1] - Artifactory is running in non-clustered mode.
+2021-05-26T18:38:02.528Z [jfrt ] [INFO ] [79ef9a47851f6e00] [tifactoryHomeConfigListener:85] [ocalhost-startStop-1] - Resolved Home: '/opt/jfrog/artifactory
+2021-05-26T18:38:04.670Z [jfrt ] [INFO ] [                ] [o.j.c.w.FileWatcher:147       ] [Thread-6            ] - Starting watch of folder configurations
+2021-05-26T18:38:04.988Z [jfrt ] [WARN ] [79ef9a47851f6e00] [c.z.h.u.DriverDataSource:70   ] [ocalhost-startStop-1] - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2021-05-26T18:38:08.512Z [jfrt ] [INFO ] [79ef9a47851f6e00] [.BasicConfigurationManager:186] [ocalhost-startStop-1] - Artifactory (jfrt) service initialization started. Version: 7.18.6 Revision: 71806900 PID: 3218 Home: /opt/jfrog/artifactory
+2021-05-26T18:38:13.546Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:38:18.556Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:38:23.559Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:38:28.562Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:38:33.564Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:38:38.565Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:38:43.567Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:38:48.569Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:38:53.571Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:38:58.573Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:39:03.575Z [jfrt ] [INFO ] [79ef9a47851f6e00] [o.j.s.c.KeyUtils:108          ] [ocalhost-startStop-1] - Master key is missing. Pending for 5 seconds with 60 seconds timeout
+2021-05-26T18:39:08.600Z [jfrt ] [ERROR] [79ef9a47851f6e00] [tifactoryHomeConfigListener:55] [ocalhost-startStop-1] - Failed initializing Home. Caught exception: 
+java.lang.IllegalStateException: Failed resolving master key; Missing master key
+	at org.jfrog.security.common.KeyUtils.keyResolutionFailure(KeyUtils.java:152)
+	at org.jfrog.security.common.KeyUtils.waitForKey(KeyUtils.java:81)
+	at org.artifactory.storage.db.init.MasterKeyBootstrapUtil.getMasterKey(MasterKeyBootstrapUtil.java:188)
+	at org.artifactory.storage.db.init.MasterKeyBootstrapUtil.handleMasterKey(MasterKeyBootstrapUtil.java:64)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initArtifactoryInstallation(BasicConfigurationManager.java:142)
+	at org.artifactory.lifecycle.webapp.servlet.BasicConfigurationManager.initialize(BasicConfigurationManager.java:126)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.initBasicConfigManager(ArtifactoryHomeConfigListener.java:61)
+	at org.artifactory.lifecycle.webapp.servlet.ArtifactoryHomeConfigListener.contextInitialized(ArtifactoryHomeConfigListener.java:53)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4705)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5171)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:743)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:606)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1766)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-05-26T18:39:08.607Z [jfrt ] [ERROR] [79ef9a47851f6e00] [actoryContextConfigListener:92] [ocalhost-startStop-1] - Failed initializing Artifactory context: Artifactory home not initialized.

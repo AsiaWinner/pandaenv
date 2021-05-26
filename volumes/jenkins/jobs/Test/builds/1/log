@@ -1,0 +1,12 @@
+Started by user [8mha:////4PbvjV8qOfzmBswMpyIIocMo7F+7931YRChNbINMgDS7AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9gsS8lEQA4ulu2cAAAAA=[0mAsia
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/Test
+[Test] $ /bin/sh -xe /tmp/jenkins15996184170742520422.sh
++ [ true = true ]
++ echo trueeeee!!!!
+trueeeee!!!!
++ echo lubie placki
+lubie placki
+/tmp/jenkins15996184170742520422.sh: 9: /tmp/jenkins15996184170742520422.sh: Syntax error: Unterminated quoted string
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,325 @@
+26-May-2021 18:37:53.862 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+26-May-2021 18:37:53.977 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+26-May-2021 18:37:54.053 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-127.0.0.1-8091"]
+26-May-2021 18:37:54.067 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+26-May-2021 18:37:54.071 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-127.0.0.1-8040"]
+26-May-2021 18:37:54.082 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+26-May-2021 18:37:54.165 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+26-May-2021 18:37:54.167 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.63
+26-May-2021 18:37:54.277 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/opt/jfrog/artifactory/app/artifactory/tomcat/conf/Catalina/localhost/artifactory.xml]
+26-May-2021 18:37:54.277 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/opt/jfrog/artifactory/app/artifactory/tomcat/conf/Catalina/localhost/access.xml]
+26-May-2021 18:37:54.386 WARNING [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor A docBase [/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/artifactory.war] inside the host appBase has been specified, and will be ignored
+26-May-2021 18:37:54.412 WARNING [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor A docBase [/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access.war] inside the host appBase has been specified, and will be ignored
+26-May-2021 18:38:21.339 SEVERE [localhost-startStop-2] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+	org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/access]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:743)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:606)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1766)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+	Caused by: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-application-7.18.2.jar!/org/jfrog/access/rest/config/JerseyConfig.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'httpServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/http/HttpServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'internalConfigurationServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/configuration/InternalConfigurationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigurationStorageServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/db/AccessConfigurationStorageServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigsDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/db/dao/AccessConfigsDao.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessJdbcHelperImpl': Invocation of init method failed; nested exception is org.flywaydb.core.internal.dbsupport.FlywaySqlScriptException: 
+Migration V2__Initial_Schema_Update.sql failed
+----------------------------------------------
+SQL State  : 42X14
+Error Code : 20000
+Message    : 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+Location   : db/derby/migration/V2__Initial_Schema_Update.sql (/var/opt/jfrog/artifactory/file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/db/derby/migration/V2__Initial_Schema_Update.sql)
+Line       : 2
+Statement  : ALTER TABLE access_tokens DROP COLUMN last_modified
+
+		at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:156)
+		at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+		at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+		at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+		at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+		at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+		at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.run(SpringBootServletInitializer.java:151)
+		at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.createRootApplicationContext(SpringBootServletInitializer.java:131)
+		at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.onStartup(SpringBootServletInitializer.java:91)
+		at org.springframework.web.SpringServletContainerInitializer.onStartup(SpringServletContainerInitializer.java:172)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5160)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 10 more
+	Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-application-7.18.2.jar!/org/jfrog/access/rest/config/JerseyConfig.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'httpServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/http/HttpServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'internalConfigurationServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/configuration/InternalConfigurationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigurationStorageServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/db/AccessConfigurationStorageServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigsDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/db/dao/AccessConfigsDao.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessJdbcHelperImpl': Invocation of init method failed; nested exception is org.flywaydb.core.internal.dbsupport.FlywaySqlScriptException: 
+Migration V2__Initial_Schema_Update.sql failed
+----------------------------------------------
+SQL State  : 42X14
+Error Code : 20000
+Message    : 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+Location   : db/derby/migration/V2__Initial_Schema_Update.sql (/var/opt/jfrog/artifactory/file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/db/derby/migration/V2__Initial_Schema_Update.sql)
+Line       : 2
+Statement  : ALTER TABLE access_tokens DROP COLUMN last_modified
+
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+		at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+		at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+		at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+		at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+		at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+		at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:202)
+		at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:96)
+		at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:85)
+		at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:253)
+		at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:227)
+		at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+		at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+		... 21 more
+	Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-application-7.18.2.jar!/org/jfrog/access/rest/config/JerseyConfig.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'httpServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/http/HttpServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'internalConfigurationServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/configuration/InternalConfigurationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigurationStorageServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/db/AccessConfigurationStorageServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigsDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/db/dao/AccessConfigsDao.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessJdbcHelperImpl': Invocation of init method failed; nested exception is org.flywaydb.core.internal.dbsupport.FlywaySqlScriptException: 
+Migration V2__Initial_Schema_Update.sql failed
+----------------------------------------------
+SQL State  : 42X14
+Error Code : 20000
+Message    : 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+Location   : db/derby/migration/V2__Initial_Schema_Update.sql (/var/opt/jfrog/artifactory/file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/db/derby/migration/V2__Initial_Schema_Update.sql)
+Line       : 2
+Statement  : ALTER TABLE access_tokens DROP COLUMN last_modified
+
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+		at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+		at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+		at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+		at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+		... 47 more
+	Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'httpServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/http/HttpServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'internalConfigurationServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/configuration/InternalConfigurationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigurationStorageServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/db/AccessConfigurationStorageServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigsDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/db/dao/AccessConfigsDao.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessJdbcHelperImpl': Invocation of init method failed; nested exception is org.flywaydb.core.internal.dbsupport.FlywaySqlScriptException: 
+Migration V2__Initial_Schema_Update.sql failed
+----------------------------------------------
+SQL State  : 42X14
+Error Code : 20000
+Message    : 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+Location   : db/derby/migration/V2__Initial_Schema_Update.sql (/var/opt/jfrog/artifactory/file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/db/derby/migration/V2__Initial_Schema_Update.sql)
+Line       : 2
+Statement  : ALTER TABLE access_tokens DROP COLUMN last_modified
+
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+		at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+		at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+		at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+		at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+		... 61 more
+	Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'internalConfigurationServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/configuration/InternalConfigurationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigurationStorageServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/db/AccessConfigurationStorageServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigsDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/db/dao/AccessConfigsDao.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessJdbcHelperImpl': Invocation of init method failed; nested exception is org.flywaydb.core.internal.dbsupport.FlywaySqlScriptException: 
+Migration V2__Initial_Schema_Update.sql failed
+----------------------------------------------
+SQL State  : 42X14
+Error Code : 20000
+Message    : 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+Location   : db/derby/migration/V2__Initial_Schema_Update.sql (/var/opt/jfrog/artifactory/file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/db/derby/migration/V2__Initial_Schema_Update.sql)
+Line       : 2
+Statement  : ALTER TABLE access_tokens DROP COLUMN last_modified
+
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+		at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+		at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+		at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+		at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+		... 75 more
+	Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigurationStorageServiceImpl' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/service/db/AccessConfigurationStorageServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigsDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/db/dao/AccessConfigsDao.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessJdbcHelperImpl': Invocation of init method failed; nested exception is org.flywaydb.core.internal.dbsupport.FlywaySqlScriptException: 
+Migration V2__Initial_Schema_Update.sql failed
+----------------------------------------------
+SQL State  : 42X14
+Error Code : 20000
+Message    : 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+Location   : db/derby/migration/V2__Initial_Schema_Update.sql (/var/opt/jfrog/artifactory/file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/db/derby/migration/V2__Initial_Schema_Update.sql)
+Line       : 2
+Statement  : ALTER TABLE access_tokens DROP COLUMN last_modified
+
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+		at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+		at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+		at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+		at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+		... 89 more
+	Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accessConfigsDao' defined in URL [jar:file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/org/jfrog/access/server/db/dao/AccessConfigsDao.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessJdbcHelperImpl': Invocation of init method failed; nested exception is org.flywaydb.core.internal.dbsupport.FlywaySqlScriptException: 
+Migration V2__Initial_Schema_Update.sql failed
+----------------------------------------------
+SQL State  : 42X14
+Error Code : 20000
+Message    : 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+Location   : db/derby/migration/V2__Initial_Schema_Update.sql (/var/opt/jfrog/artifactory/file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/db/derby/migration/V2__Initial_Schema_Update.sql)
+Line       : 2
+Statement  : ALTER TABLE access_tokens DROP COLUMN last_modified
+
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+		at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+		at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+		at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+		at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+		... 103 more
+	Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessJdbcHelperImpl': Invocation of init method failed; nested exception is org.flywaydb.core.internal.dbsupport.FlywaySqlScriptException: 
+Migration V2__Initial_Schema_Update.sql failed
+----------------------------------------------
+SQL State  : 42X14
+Error Code : 20000
+Message    : 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+Location   : db/derby/migration/V2__Initial_Schema_Update.sql (/var/opt/jfrog/artifactory/file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/db/derby/migration/V2__Initial_Schema_Update.sql)
+Line       : 2
+Statement  : ALTER TABLE access_tokens DROP COLUMN last_modified
+
+		at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+		at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+		at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+		at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+		at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+		at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+		at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+		... 117 more
+	Caused by: org.flywaydb.core.internal.dbsupport.FlywaySqlScriptException: 
+Migration V2__Initial_Schema_Update.sql failed
+----------------------------------------------
+SQL State  : 42X14
+Error Code : 20000
+Message    : 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+Location   : db/derby/migration/V2__Initial_Schema_Update.sql (/var/opt/jfrog/artifactory/file:/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/access/WEB-INF/lib/access-server-core-7.18.2.jar!/db/derby/migration/V2__Initial_Schema_Update.sql)
+Line       : 2
+Statement  : ALTER TABLE access_tokens DROP COLUMN last_modified
+
+		at org.flywaydb.core.internal.dbsupport.SqlScript.execute(SqlScript.java:145)
+		at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:76)
+		at org.flywaydb.core.internal.command.DbMigrate.doMigrate(DbMigrate.java:324)
+		at org.flywaydb.core.internal.command.DbMigrate.access$900(DbMigrate.java:49)
+		at org.flywaydb.core.internal.command.DbMigrate$4.call(DbMigrate.java:280)
+		at org.flywaydb.core.internal.util.jdbc.TransactionTemplate.execute(TransactionTemplate.java:75)
+		at org.flywaydb.core.internal.command.DbMigrate.applyMigration(DbMigrate.java:277)
+		at org.flywaydb.core.internal.command.DbMigrate.access$800(DbMigrate.java:49)
+		at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:201)
+		at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:142)
+		at org.flywaydb.core.internal.dbsupport.DbSupport$1.call(DbSupport.java:224)
+		at org.flywaydb.core.internal.util.jdbc.TransactionTemplate.execute(TransactionTemplate.java:75)
+		at org.flywaydb.core.internal.dbsupport.DbSupport.lock(DbSupport.java:220)
+		at org.flywaydb.core.internal.metadatatable.MetaDataTableImpl.lock(MetaDataTableImpl.java:174)
+		at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:142)
+		at org.flywaydb.core.Flyway$1.execute(Flyway.java:969)
+		at org.flywaydb.core.Flyway$1.execute(Flyway.java:930)
+		at org.flywaydb.core.Flyway.execute(Flyway.java:1413)
+		at org.flywaydb.core.Flyway.migrate(Flyway.java:930)
+		at org.jfrog.access.server.db.util.AccessJdbcHelperImpl.init(AccessJdbcHelperImpl.java:66)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+		at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+		at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+		... 130 more
+	Caused by: java.sql.SQLSyntaxErrorException: 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+		at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+		at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+		at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(Unknown Source)
+		at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(Unknown Source)
+		at org.apache.derby.impl.jdbc.EmbedConnection.handleException(Unknown Source)
+		at org.apache.derby.impl.jdbc.ConnectionChild.handleException(Unknown Source)
+		at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+		at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+		at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+		at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+		at org.flywaydb.core.internal.dbsupport.JdbcTemplate.executeStatement(JdbcTemplate.java:267)
+		at org.flywaydb.core.internal.dbsupport.SqlScript.execute(SqlScript.java:142)
+		... 156 more
+	Caused by: ERROR 42X14: 'LAST_MODIFIED' is not a column in table or VTI 'ACCESS_TOKENS'.
+		at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+		at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+		at org.apache.derby.impl.sql.compile.ModifyColumnNode.bindAndValidateDefault(Unknown Source)
+		at org.apache.derby.impl.sql.compile.TableElementList.validate(Unknown Source)
+		at org.apache.derby.impl.sql.compile.AlterTableNode.bindStatement(Unknown Source)
+		at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+		at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+		at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+		... 162 more
+26-May-2021 18:38:21.348 SEVERE [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [/opt/jfrog/artifactory/app/artifactory/tomcat/conf/Catalina/localhost/access.xml]
+	java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/access]]
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:747)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:606)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1766)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+26-May-2021 18:38:21.356 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/opt/jfrog/artifactory/app/artifactory/tomcat/conf/Catalina/localhost/access.xml] has finished in [27,077] ms
+26-May-2021 18:39:08.614 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+26-May-2021 18:39:08.619 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/artifactory] startup failed due to previous errors
+26-May-2021 18:39:08.657 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/opt/jfrog/artifactory/app/artifactory/tomcat/conf/Catalina/localhost/artifactory.xml] has finished in [74,380] ms
+26-May-2021 18:39:08.663 INFO [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/ROOT]
+26-May-2021 18:39:08.702 INFO [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/jfrog/artifactory/app/artifactory/tomcat/webapps/ROOT] has finished in [38] ms
+26-May-2021 18:39:08.708 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+26-May-2021 18:39:08.722 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-127.0.0.1-8091"]
+26-May-2021 18:39:08.726 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-127.0.0.1-8040"]
